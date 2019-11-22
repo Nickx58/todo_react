@@ -1,0 +1,134 @@
+@import "./colors";
+@import "./dimentions";
+
+.app {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  height: 100%;
+
+  &__side-nav-backdrop {
+    display: none;
+  }
+
+  &__side-nav-handle {
+    display: none;
+  }
+
+  &__side-nav {
+    width: $side-nav-width;
+    background: $side-nav-background;
+    color: $side-nav-text-color;
+    flex-shrink: 0;
+  }
+
+  &__main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background: $main-container-background;
+  }
+
+  &__header {
+    height: $app-header-height;
+    background: $app-header-background;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  &__body {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .app {
+    position: relative;
+
+    &__header {
+      padding: 0 1.5rem 0 4.25rem;
+    }
+
+    &_nav-visible &__side-nav-backdrop {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    &__side-nav-backdrop {
+      display: none;
+    }
+
+    &_nav-visible &__side-nav-handle {
+      display: block;
+      left: $side-nav-width;
+
+      .hamburger-icon {
+        .line {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            transform-origin: left;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+
+    &__side-nav-handle {
+      left: 0.5rem;
+      top: 18px;
+      display: block;
+      position: absolute;
+      transition: all 0.25s ease-in-out;
+
+      .hamburger-icon {
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        transition: all 0.25s ease-in-out;
+        width: 3.75rem;
+        border-top-right-radius: 0.625rem;
+        border-bottom-right-radius: 0.625rem;
+
+        .line {
+          border-radius: 0.625rem;
+          height: 6px;
+          margin: 2px 0;
+          width: 100%;
+          display: inline-block;
+          background: $side-nav-background;
+          opacity: 1;
+          transition: inherit;
+          transform: rotate(0);
+        }
+      }
+    }
+
+    &_nav-visible &__side-nav {
+      left: 0;
+    }
+
+    &__side-nav {
+      position: absolute;
+      height: 100%;
+      left: -$side-nav-width;
+      transition: all 0.25s ease-in-out;
+    }
+  }
+}

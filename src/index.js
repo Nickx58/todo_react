@@ -1,9 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import { render } from "react-dom";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+
+import rootReducer from "./reducers";
 import Root from "./components/Root";
-import * as serviceWorker from "./serviceWorker";
+import { logger } from "./utils/store";
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+import "./index.scss";
 
-serviceWorker.unregister();
+const middlewares = [logger];
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(...middlewares))
+);
+
+render(<Root store={store} />, document.getElementById("root"));
