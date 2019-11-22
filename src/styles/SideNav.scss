@@ -1,0 +1,65 @@
+@import './colors';
+@import './dimentions';
+
+.link {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+
+  &:hover,
+  &_active {
+    opacity: 1;
+    background: $side-nav-link-active-background;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+}
+
+.nav {
+  overflow: auto;
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header {
+    height: $app-header-height;
+    background: $theme-color;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  &__link {
+    color: $side-nav-text-color;
+    text-decoration: none;
+    padding: 1.5rem $side-nav-padding;
+    width: 100%;
+
+    &_active,
+    &_hover {
+      background: #211f2a;
+    }
+  }
+}
+
+.overall-progress {
+  margin-top: 2rem;
+  flex-direction: column;
+
+  &__label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__canvas {
+    margin-bottom: 1rem;
+  }
+}

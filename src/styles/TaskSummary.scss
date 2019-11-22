@@ -1,0 +1,55 @@
+@import './colors';
+
+.task {
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.75rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+
+  &_selected {
+    border-left: 4px solid $theme-color;
+    background: #f6f6f6;
+  }
+
+  &__drag-handle {
+    width: 10px;
+    line-height: 5px;
+    cursor: move;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #cccccc;
+    text-shadow: 1px 0 1px black;
+    margin-right: 1rem;
+    overflow: hidden;
+
+    &::after {
+      content: '.. .. .. .. .. .. ..';
+    }
+  }
+
+  &__drag-handle,
+  &__progress {
+    flex-shrink: 0;
+  }
+
+  &__details {
+    flex: 1;
+    overflow: hidden;
+    min-height: 2.75rem;
+  }
+
+  &__title {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__progress {
+    margin-left: 1rem;
+  }
+}

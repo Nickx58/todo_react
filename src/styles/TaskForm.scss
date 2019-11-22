@@ -1,0 +1,55 @@
+
+@import 'dimentions';
+
+.task-form {
+  padding: 0 2rem;
+
+  &__action {
+    margin-right: 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    &_right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    flex: 1;
+    width: 100%;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .task-form {
+    &__action {
+      margin: 0;
+      margin-bottom: 0.75rem;
+      width: 100%;
+    }
+  }
+}

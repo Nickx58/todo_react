@@ -1,5 +1,5 @@
-@import "./colors";
-@import "./dimentions";
+@import './colors';
+@import './dimentions';
 
 .app {
   display: flex;
@@ -123,7 +123,7 @@
     &_nav-visible &__side-nav {
       left: 0;
     }
-
+    
     &__side-nav {
       position: absolute;
       height: 100%;

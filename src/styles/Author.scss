@@ -1,0 +1,24 @@
+.author {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    max-width: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__details {
+    text-transform: uppercase;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.25rem;
+  }
+}

@@ -1,0 +1,27 @@
+@import "./dimentions";
+
+.tasks {
+  display: flex;
+  height: 100%;
+  padding: 1.5rem;
+
+  &__list {
+    flex: 1;
+  }
+
+  &__details {
+    flex: 2;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .tasks {
+    &__list-visible &__details {
+      display: none;
+    }
+
+    &__details-visible &__list {
+      display: none;
+    }
+  }
+}
