@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/todo_react/static/css/main.d7311a52.chunk.css",
+    "main.js": "/todo_react/static/js/main.5b82d767.chunk.js",
+    "main.js.map": "/todo_react/static/js/main.5b82d767.chunk.js.map",
+    "runtime-main.js": "/todo_react/static/js/runtime-main.d4699b91.js",
+    "runtime-main.js.map": "/todo_react/static/js/runtime-main.d4699b91.js.map",
+    "static/js/2.51960002.chunk.js": "/todo_react/static/js/2.51960002.chunk.js",
+    "static/js/2.51960002.chunk.js.map": "/todo_react/static/js/2.51960002.chunk.js.map",
+    "index.html": "/todo_react/index.html",
+    "precache-manifest.158b1721e09494dbb9e744bd4a6f5203.js": "/todo_react/precache-manifest.158b1721e09494dbb9e744bd4a6f5203.js",
+    "service-worker.js": "/todo_react/service-worker.js",
+    "static/css/main.d7311a52.chunk.css.map": "/todo_react/static/css/main.d7311a52.chunk.css.map",
+    "static/media/bin.svg": "/todo_react/static/media/bin.40d5f230.svg",
+    "static/media/done.svg": "/todo_react/static/media/done.c2625638.svg",
+    "static/media/edit.svg": "/todo_react/static/media/edit.522a418b.svg",
+    "static/media/plus.svg": "/todo_react/static/media/plus.8601f5bd.svg",
+    "static/media/task-archived.svg": "/todo_react/static/media/task-archived.37acd060.svg",
+    "static/media/task-completed.svg": "/todo_react/static/media/task-completed.981ae311.svg",
+    "static/media/task-in-progress.svg": "/todo_react/static/media/task-in-progress.9be52237.svg",
+    "static/media/task-pending.svg": "/todo_react/static/media/task-pending.2bfbf733.svg",
+    "static/media/task-search.svg": "/todo_react/static/media/task-search.e7cffb9d.svg",
+    "static/media/www.svg": "/todo_react/static/media/www.c94aea67.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4699b91.js",
+    "static/js/2.51960002.chunk.js",
+    "static/css/main.d7311a52.chunk.css",
+    "static/js/main.5b82d767.chunk.js"
+  ]
+}
